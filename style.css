@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +7,14 @@
 
 body {
     font-style: normal;
-    font-family: Lato;
+    font-family: Lato, sans-serif;
 }
 
 .container {
-    max-width: 1600px;
+    max-width: 1140px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 img {
@@ -24,9 +28,8 @@ p {
 
 .header {
     background-color: #222222;
-    display: flex;
-    justify-content: space-between;
     padding: 19px 230px;
+    box-sizing: border-box;
 }
 
 .search {
@@ -41,48 +44,50 @@ p {
 }
 
 .ul__nav {
+    height: 100%;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-}
-
-.top {
-    max-width: 1600px;
-    background-color: #F1E4E6;
-    display: flex;
     align-items: center;
 }
 
+.top {
+    background-color: #F1E4E6;
+}
+
 .top__image {
-    height: 100%;
+    height: 765px;
+    width: 420px;
 }
 
 .top_text {
     display: flex;
-    margin-left: 64px;
+    align-items: center;
 }
 
 .top_text_logo {
-    margin-left: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-left: 12px solid #F16D7F;
 }
 
 .top_text_logo h1 {
-    font-size: 44px;
-    line-height: 53px;
+    font-size: 48px;
+    line-height: 58px;
     color: #222222;
     font-weight: 900;
 }
 
 .text_logo {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .fashion,
 .ofluxe {
-    font-size: 24px;
-    line-height: 29px;
     font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
 }
 
 .fashion {
@@ -106,6 +111,7 @@ p {
 
 .top__departments img {
     width: 100%;
+    height: 100%;
 }
 
 .products {
@@ -142,9 +148,6 @@ p {
     grid-column: 1/4;
 }
 
-.accesories img {
-    width: 100%;
-}
 
 .catalog {
     margin-top: 95px;
@@ -182,6 +185,10 @@ p {
     flex-direction: column;
 }
 
+.cart_img {
+    width: 100%;
+}
+
 .h4_cartitem {
     font-size: 13px;
     line-height: 16px;
@@ -216,8 +223,11 @@ p {
     align-self: center;
 }
 
-.footer_top {
+.footer_top_bg {
     background-color: #222224;
+}
+
+.footer_top {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -245,10 +255,14 @@ p {
     height: 40px;
 }
 
-.footer_subscribe {
+.footer_subscribe_bg {
     background-image: url(img/bg_subscribe.png);
     background-repeat: no-repeat;
     background-position: bottom;
+    background-size: cover;
+}
+
+.footer_subscribe {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -256,7 +270,7 @@ p {
 }
 
 .subscribe_info {
-    width: 345px;
+    max-width: 345px;
     text-align: center;
 }
 
@@ -310,8 +324,11 @@ p {
     display: flex;
 }
 
-.footer_bottom {
+.footer_bottom_bg {
     background-color: #222224;
+}
+
+.footer_bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -334,22 +351,39 @@ p {
     }
 
     .top__image {
-        width: 50%;
+        height: 50%;
     }
 
-    .top_text {
-        margin-left: 40px;
+    .top_container {
+        justify-content: space-evenly;
+    }
+
+    .top_text_logo {
+        padding-right: 34px;
+    }
+
+    .top_text_logo h1 {
+        font-size: 44px;
+        line-height: 53px;
+    }
+
+    .fashion,
+    .ofluxe {
+        font-size: 24px;
+        line-height: 29px;
     }
 
     .content,
     .catalog {
         padding-left: 16px;
         padding-right: 16px;
+        justify-content: center;
     }
 
     .top__departments {
         gap: 18px;
         padding-top: 20px;
+        grid-template-rows: 167px 116px;
     }
 
     .itemcarts {
@@ -364,11 +398,14 @@ p {
         padding: 50px 200px;
     }
 
+    .footer_subscribe_bg {
+        background-position: left;
+        background-size: cover;
+    }
+
     .footer_subscribe {
         flex-direction: column;
         padding: 64px 204px;
-        background-position: left;
-        background-size: cover;
     }
 
     .subscribe {
@@ -404,8 +441,13 @@ p {
         width: 75%;
     }
 
+    .top_text_logo {
+        padding-right: 0;
+    }
+
     .top {
         min-height: 363px;
+        display: flex;
         justify-content: center;
     }
 
@@ -445,6 +487,10 @@ p {
 
     .footer_subscribe {
         padding: 64px 13px;
+    }
+
+    .subscribe input {
+        width: 210px;
     }
 
     .footer_bottom {
