@@ -69,6 +69,7 @@ p {
     padding-left: 16px;
     padding-right: 16px;
     border-left: 12px solid #F16D7F;
+    text-shadow: 0 4px 2px grey;
 }
 
 .top_text_logo h1 {
@@ -172,6 +173,7 @@ p {
 .h2_topcatalog {
     font-size: 30px;
     line-height: 36px;
+    font-weight: normal;
     color: #222222;
 }
 
